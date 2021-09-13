@@ -1,0 +1,89 @@
+@import "./colors";
+
+
+html {
+    background-color: $backhtml;
+}
+
+.continer-12 {
+
+    background-color: $colors-red;
+    h1 {
+        color: white;
+        a {
+            color:blue;
+        }
+    }
+
+}
+
+@mixin contierText($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+.any {
+    @include contierText(red, 10rem)
+}
+
+.all-coments-viewed {
+    width: 25rem;
+    height: 20rem;
+    background-color: $allComents;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    overflow:auto;
+    .a-menssage{
+        width: 15rem;
+        min-height: 1rem;
+        background-color: rgb(56, 56, 56);
+        margin: 1rem;
+        border-radius: 1rem;
+        justify-content: center;
+        padding: 10px;
+
+        .name-people{
+            width: 90%;
+            color: rgb(189, 189, 189);
+            font-size: 0.8rem;
+            text-transform: capitalize;
+        }
+        .country-comment{
+            width: 90%;
+            color: rgb(255, 174, 0);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform:capitalize;
+        }
+    }
+
+}
+
+
+.all-coments-viewed::-webkit-scrollbar {
+
+    background:transparent;
+    width: 10px;
+  
+  }
+  
+  .all-coments-viewed::-webkit-scrollbar-thumb {
+  
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    width: 5px;
+  }
+  
+  .all-coments-viewed::-webkit-scrollbar-track {
+    width: 3px;
+  }
+
+  .footer-aPage {
+      width: 100%;
+      height: 10rem;
+      background-color: #333456;
+      color: white;
+  }

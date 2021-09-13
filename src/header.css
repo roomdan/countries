@@ -1,0 +1,22 @@
+.header-all-page{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background-color: #060930;
+    border-bottom-left-radius: 15%;
+    position: relative;
+    transition: top 400ms linear;
+}
+
+.nav-part {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

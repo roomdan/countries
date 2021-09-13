@@ -1,0 +1,231 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.country-simple{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 1rem;
+  opacity: 10%;
+  transition: opacity 0.3s linear;
+}
+
+.select-region {
+
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: rgb(33, 33, 65);
+  color: white;
+  outline: none;
+}
+
+*::selection {
+
+background-color: rgb(0, 0, 0);
+color: rgb(255, 145, 0);
+}
+
+option:active  {
+
+  background-color: red;
+
+}
+
+.continer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.image-country{
+  width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.image-country img{
+  width: 100%;
+  height: 300px;
+  border: solid 1px rgb(156, 156, 156);
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.all-countries-grid {
+
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pagination-style {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #060930;
+  color: white;
+  position: sticky;
+  bottom: 0px;
+}
+
+.page-number {
+  width: 40px;
+  text-align: center;
+  border-color: transparent;
+  outline: none;
+  margin: 0.5rem;
+}
+
+.show-more{
+  background-color: rgb(106, 207, 114);
+  width: 33%;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+
+.more-button{
+
+  background-color:transparent;
+  outline: none;
+  padding: 6px;
+  background-color: #ffffff;
+  color: #060930;
+  font-weight: 600;
+  margin-left: 1rem;
+  border: none;
+  margin-right: 1rem;
+
+}
+
+.continer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-country{
+  width: 400px;
+  background-color: rgb(33, 33, 65);
+  color: white;
+  margin: 10px;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+body::-webkit-scrollbar {
+
+  background:white;
+  width: 10px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+
+  background-color: #333456;
+  border-radius: 1rem;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 3px;
+}
+
+.child {
+  margin: 0.5rem
+}
+
+.nav-part-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.btn{
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.image-zoom{
+  top: 0%;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+.head-view{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.589);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.img-zoom-content{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-close{
+
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: red;
+  outline: none;
+  border:none;
+  margin:1rem;
+
+}
+
+.zoom-image-center{
+  width: 30rem;
+  height: 20rem ;
+  margin:1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-in;
+}
+
+.zoom-image-center img {
+  width: 100%;
+  height: 100%;
+}

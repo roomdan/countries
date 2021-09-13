@@ -1,0 +1,29 @@
+.loader-box {
+    width: 98vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #3334567c;
+}
+
+.loader-animation{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 13px solid rgb(255, 255, 255);
+    border-top: 13px solid rgb(0, 110, 255);
+    animation: loader 500ms  linear infinite;
+}
+
+@keyframes loader {
+    
+    from {
+    transform: rotate(0deg);
+}
+    to{
+        transform: rotate(360deg);
+    }
+}
