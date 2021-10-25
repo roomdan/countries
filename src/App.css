@@ -74,6 +74,18 @@ option:active  {
   margin-bottom: 2rem;
 }
 
+@media screen and(max-width:720px) {
+  .all-countries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .pagination-style {
   width: 100%;
   height: 3rem;

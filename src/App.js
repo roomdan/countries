@@ -7,17 +7,14 @@ import Header from './header';
 import Home from './home';
 import './loader.css';
 
-
 function App() {
-
-  const [region, setRegion] = useState('eu');const [mode, setMode] = useState('select');
 
 return (
   <Router>
-    <Header onRegionSelect={e=>{setRegion(e.value.region); setMode(e.type)}}/>
+    <Header/>
     <Switch>
       <Route path='/' exact>
-        <Home mode={mode} Sregion={region}>
+        <Home>
           </Home> 
       </Route>
       <Route path="/country/:name">

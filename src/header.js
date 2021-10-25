@@ -1,19 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form"
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
+import { Region } from "./CONTEXT/context.region";
 import "./header.css"
 
-const Header = ({onRegionSelect})=>{
+const Header = ()=>{
+
+    const [state, dispatch ] = useContext(Region);
 
     const {register, handleSubmit} = useForm();
     const [sy, setSy] = useState(0);
     const [fix, setFix] = useState('');const [top,setTop]=useState('');
-    const [a, seta ] = useState({region:'EU (European Union)'})
-
     const  history = useHistory();
-
-    
-
     document.onscroll = ()=>{
        const sY = window.scrollY;
        setSy(sY)
@@ -31,26 +30,22 @@ const Header = ({onRegionSelect})=>{
         
         <div style={{position:fix,top:top}} className='header-all-page'>
              <div className='nav-part'>
-                <form className='select-Form' onChange={handleSubmit(e=>{onRegionSelect({value:e}); seta(e)})}>
+                <form className='select-Form' onChange={handleSubmit(e=>{dispatch({type:'CHANGE_REGION',payload:e});history.push('/')})}>
                     <select className='select-region' {...register('region')}>
-                        <option value='EU'>EU (European Union)</option>
-                        <option value='EFTA'>EFTA (European Free Trade Association)</option>
-                        <option value='CARICOM'>CARICOM (Caribbean Community)</option>
-                        <option value='PA'>PA (Pacific Alliance)</option>
-                        <option value='AU'>AU (African Union)</option>
-                        <option value='USAN'>USAN (Union of South American Nations)</option>
-                        <option value='EEU'>EEU (Eurasian Economic Union)</option>
-                        <option value='AL'>AL (Arab League)</option>
-                        <option value='ASEAN'>ASEAN (Association of Southeast Asian Nations)</option>
-                        <option value='CAIS'>CAIS (Central American Integration System)</option>
+                        <option value='africa'>AFRICA</option>
+                        <option value='americas'>AMERICAS</option>
+                        <option value='asia'>ASIA</option>
+                        <option value='europe'>EUROPE</option>
+                        <option value='oceania'>OCEANIA</option>
                     </select>
                 </form>
             </div>
             <div className='nav-part'>
+                <Link to="/">{state.region.toUpperCase()}</Link>
             </div>
             <div className='nav-part-title'>
                 <button className='btn' onClick={()=>{history.goBack()}}>
-                {a.region} Countries
+                {''} Countries
                 </button>
             </div>
         </div>

@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import RegionContext from './CONTEXT/context.region';
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <RegionContext>
+      <App />
+    </RegionContext>
   </React.StrictMode>,
   document.getElementById('root')
 );
